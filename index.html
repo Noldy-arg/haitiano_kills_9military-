@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Periodicos</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Las Noticias</title>
+
+    <script>
+
+        function getLocation() {
+
+            if (navigator.geolocation) {
+
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+
+            } else {
+
+                alert("La géolocalisation n'est pas supportée par ce navigateur.");
+
+            }
+
+        }
+
+        function showPosition(position) {
+
+            alert("Latitude: " + position.coords.latitude + "\nLongitude: " + position.coords.longitude);
+
+        }
+
+        function showError(error) {
+
+            switch(error.code) {
+
+                case error.PERMISSION_DENIED:
+
+                    alert("L'utilisateur a refusé la demande de géolocalisation.");
+
+                    break;
+
+                case error.POSITION_UNAVAILABLE:
+
+                    alert("L'emplacement n'est pas disponible.");
+
+                    break;
+
+                case error.TIMEOUT:
+
+                    alert("Le délai de la demande de géolocalisation a expiré.");
+
+                    break;
+
+                default:
+
+                    alert("Une erreur inconnue s'est produite.");
+
+                    break;
+
+            }
+
+        }
+
+    </script>
+
+</head>
+
+<body onload="getLocation()">
+
+    <h1>Bienvendo</h1>
+
+    <p>Aquí el periódico de todo el país...Esperen a ver el video de un haitiano que mató a dos dominicanos solo con un teléfono...</p>
+
+</body>
+
+</html>
+<!-- partial -->
+  
+</body>
+</html>
